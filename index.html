@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Настроение</title>
+  <meta charset="utf-8">
   <script id="quotes_json" type="application/json">
     [
       {
@@ -19,7 +20,24 @@
       }
     ]
   </script>
+  <style>
+    body {
+        background-color: yellow;
+    }
+    h1 {
+        color: red;
+    }
+  </style>
 </head>
 <body>
+    <h1 id="joke">Funny Joke )))</h1>
+    <script>
+        var quotes = JSON.parse(
+            document.getElementById('quotes_json').innerHTML);
+        quote = quotes[Math.floor(Math.random() * quotes.length)];
+        var joke = document.getElementById("joke");
+        joke.innerHTML = quote.phrase;
+    </script>
 </body>
 </html>
+

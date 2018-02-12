@@ -1,6 +1,6 @@
-# Site for the Mood 
+# Site for the Mood
+https://vitalib.github.io./
 
-Displays a random funny joke.
 
 # Project Goals
 

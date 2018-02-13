@@ -19,8 +19,14 @@
       height: 100%;
     }
   </style>
-  <script id="quotes_json" type="application/json">
-    [
+</head>
+<body>
+  <div class="jumbotron">
+    <h1 class="display-4" id="my-display">A Joke!</h1>
+    <img style="border-radius: 50%" src="http://bipbap.ru/wp-content/uploads/2017/10/3-6.png" alt=""funny picture>
+  </div>
+  <script type="text/javascript">
+      var data = [
       {
         "phrase": "Кукурузные хлопья - теперь без асбеста!",
         "signature": "©Неизвестный маркетолог"
@@ -47,16 +53,12 @@
         "phrase": "Глупый мечтает стать умнее, умный мечтает стать мудрее, а мудрый мечтает о разных глупостях…"
       }
     ]
-  </script>
-</head>
-<body>
-  <div class="jumbotron">
-    <h1 class="display-4" id="my-display">A Joke!</h1>
-    <img style="border-radius: 50%" src="http://bipbap.ru/wp-content/uploads/2017/10/3-6.png" alt=""funny picture>
-  </div>
-  <script type="text/javascript">
-    var data = JSON.parse(document.getElementById('quotes_json').innerHTML);
-    document.getElementById("my-display").textContent = data[Math.floor(Math.random()*data.length)].phrase;
+    function displayPhrase(){
+        var phrase = data[Math.floor(Math.random()*data.length)].phrase;
+        document.getElementById("my-display").textContent = phrase;
+    };
+
+    displayPhrase();
   </script>
 </body>
 </html>

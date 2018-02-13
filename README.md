@@ -1,5 +1,5 @@
 # Site for the Mood
-https://vitalib.github.io./
+https://vitalib.github.io/mood/index.html
 
 
 # Project Goals
